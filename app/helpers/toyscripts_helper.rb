@@ -1,0 +1,2 @@
+module ToyscriptsHelper
+end

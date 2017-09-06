@@ -10,9 +10,9 @@
  <tbody>
    <% @products.each do |product| %>
     <tr>
-     <td><%= product.name %></h1><br />
-     <td><%= product.sku %></i><br />
-     <td><%= number_to_currency product.price %></p>
+     <td><%= product.name %></td><br />
+     <td><%= product.sku %></td><br />
+     <td><%= number_to_currency product.price %></td>
    </tr>
   <% end %>
  </tbody>

@@ -1,12 +1,23 @@
-<div class="container-fluid">
-  <h1>Toyscripts Home Page</h1>
-  <h3>Much more to come...</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu ligula ultrices, eleifend ex sit amet, consequat ligula. Phasellus sit amet ex a mauris dictum varius. Curabitur in tempus eros, venenatis ultricies lectus. Nulla vulputate arcu id elementum gravida. Quisque rutrum sagittis massa, ut commodo ante eleifend ac. Aliquam vitae facilisis mauris. Integer eu viverra purus, sed pretium sapien. Maecenas vulputate ultricies porttitor. Donec pharetra ex id nibh varius auctor.</P>
-  <% @products.each do |product| %>
-   <div>
-     <h1><%= product.name %></h1><br />
-     <i><%= product.sku %></i><br />
-     <p><%= product.price %></p>
-   </div>
+<table>
+ <thread>
+  <tr>
+   <th>Name</th>
+   <th>SKU</th>
+   <th>Price</th>
+  </tr>
+ </thread>
+
+ <tbody>
+   <% @products.each do |product| %>
+    <tr>
+     <td><%= product.name %></h1><br />
+     <td><%= product.sku %></i><br />
+     <td><%= number_to_currency product.price %></p>
+   </tr>
   <% end %>
-</div
+ </tbody>
+</table>
+
+</div>
+
+<%= link_to 'New Product', new_product_path %>
